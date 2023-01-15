@@ -2,7 +2,7 @@
 
 This repository is created for the easy installation of airflow.
 
-Date: January 14, 2023
+Date: January 15, 2023
 ### To build docker image use below command
 
 ```
@@ -220,4 +220,3 @@ ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
