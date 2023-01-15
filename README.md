@@ -1,14 +1,15 @@
 # How to install Airflow in Docker?
 
-Date: January 14, 2023
+This repository is created for the easy installation of airflow.
 
-## To build docker image use below command
+Date: January 14, 2023
+### To build docker image use below command
 
 ```
 docker build -t airflow:2.5.0 .
 ```
 
-## To run docker container use below command
+### To run docker container use below command
 
 ```
 docker rm -f airflow
@@ -22,7 +23,7 @@ docker run -p 5555:8080 -itd --name airflow airflow:2.5.0
 docker exec -it airflow /bin/sh
 ```
 
-## Run all the command in sequence
+### Run all the command in sequence
 
 > Start virtual environment
 
@@ -84,9 +85,9 @@ grep executor /root/airflow/airflow.cfg
 airflow db init
 ```
 
-## Sample Screen will look like below
+### Sample Screen will look like below
 
-```txt
+```sh
 # . /venv/bin/activate
 (venv) # sudo service postgresql restart
  * Restarting PostgreSQL 14 database server                                                    [ OK ]
@@ -162,9 +163,9 @@ airflow webserver &
 airflow scheduler
 ```
 
-## Sample Screen will look like below
+### Sample Screen will look like below
 
-```txt
+```sh
 (venv) # airflow webserver &
 (venv) #   ____________       _____________
  ____    |__( )_________  __/__  /________      __
@@ -204,3 +205,19 @@ ___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
 [2023-01-15 20:19:18,847] {scheduler_job.py:1399} INFO - Resetting orphaned tasks for active dag runs
 [2023-01-15 20:19:18,855] {settings.py:58} INFO - Configured default timezone Timezone('UTC')
 ```
+
+**Open Browser and use `http://localhost:5555` and use `airflow` as username and `airflow` as password**
+
+## Acknowledgements
+
+ - [Youtube](https://www.youtube.com/watch?v=o88LNQDH2uI)
+
+## Authors
+
+- [Ashish Kumar](https://www.linkedin.com/in/ashishkrb7/)
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
