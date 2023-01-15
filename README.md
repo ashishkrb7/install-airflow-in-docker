@@ -86,7 +86,7 @@ airflow db init
 
 ## Sample Screen will look like below
 
-```sh
+```txt
 # . /venv/bin/activate
 (venv) # sudo service postgresql restart
  * Restarting PostgreSQL 14 database server                                                    [ OK ]
@@ -160,4 +160,47 @@ airflow webserver &
 
 ```sh
 airflow scheduler
+```
+
+## Sample Screen will look like below
+
+```txt
+(venv) # airflow webserver &
+(venv) #   ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+Running the Gunicorn Server with:
+Workers: 4 sync
+Host: 0.0.0.0:8080
+Timeout: 120
+Logfiles: - -
+Access Logformat:
+=================================================================
+[2023-01-15 20:19:00 +0530] [87] [INFO] Starting gunicorn 20.1.0
+[2023-01-15 20:19:00 +0530] [87] [INFO] Listening at: http://0.0.0.0:8080 (87)
+[2023-01-15 20:19:00 +0530] [87] [INFO] Using worker: sync
+[2023-01-15 20:19:00 +0530] [89] [INFO] Booting worker with pid: 89
+[2023-01-15 20:19:00 +0530] [90] [INFO] Booting worker with pid: 90
+[2023-01-15 20:19:00 +0530] [91] [INFO] Booting worker with pid: 91
+[2023-01-15 20:19:00 +0530] [92] [INFO] Booting worker with pid: 92
+
+(venv) # airflow scheduler
+  ____________       _____________
+ ____    |__( )_________  __/__  /________      __
+____  /| |_  /__  ___/_  /_ __  /_  __ \_ | /| / /
+___  ___ |  / _  /   _  __/ _  / / /_/ /_ |/ |/ /
+ _/_/  |_/_/  /_/    /_/    /_/  \____/____/|__/
+[2023-01-15 20:19:18 +0530] [96] [INFO] Starting gunicorn 20.1.0
+[2023-01-15 20:19:18,577] {scheduler_job.py:714} INFO - Starting the scheduler
+[2023-01-15 20:19:18,577] {scheduler_job.py:719} INFO - Processing each file at most -1 times
+[2023-01-15 20:19:18 +0530] [96] [INFO] Listening at: http://[::]:8793 (96)
+[2023-01-15 20:19:18 +0530] [96] [INFO] Using worker: sync
+[2023-01-15 20:19:18 +0530] [97] [INFO] Booting worker with pid: 97
+[2023-01-15 20:19:18,600] {executor_loader.py:107} INFO - Loaded executor: LocalExecutor
+[2023-01-15 20:19:18 +0530] [136] [INFO] Booting worker with pid: 136
+[2023-01-15 20:19:18,844] {manager.py:163} INFO - Launched DagFileProcessorManager with pid: 234
+[2023-01-15 20:19:18,847] {scheduler_job.py:1399} INFO - Resetting orphaned tasks for active dag runs
+[2023-01-15 20:19:18,855] {settings.py:58} INFO - Configured default timezone Timezone('UTC')
 ```
