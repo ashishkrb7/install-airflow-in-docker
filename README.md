@@ -4,20 +4,20 @@ Date: January 14, 2023
 
 ## To build docker image use below command
 
-```docker
+```
 docker build -t airflow:2.5.0 .
 ```
 
 ## To run docker container use below command
 
-```docker
+```
 docker rm -f airflow
 
 ```docker
 docker run -p 5555:8080 -itd --name airflow airflow:2.5.0
 ```
 
-```docker
+```
 docker exec -it airflow /bin/sh
 ```
 
