@@ -12,8 +12,9 @@ docker build -t airflow:2.5.0 .
 
 ```
 docker rm -f airflow
+```
 
-```docker
+```
 docker run -p 5555:8080 -itd --name airflow airflow:2.5.0
 ```
 
