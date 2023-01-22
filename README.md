@@ -30,6 +30,10 @@ docker exec -it airflow /bin/sh
 
 **Open Browser after 2 minutes and use http://localhost:5555 and use airflow as username and airflow as password**
 
+
+## Docker image
+
+Docker image is available at [https://hub.docker.com/r/ashishkrb7/airflow](https://hub.docker.com/r/ashishkrb7/airflow)
 ## Acknowledgements
 
  - [Youtube](https://www.youtube.com/watch?v=o88LNQDH2uI)
